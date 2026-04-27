@@ -1,0 +1,165 @@
+:root {
+    --primary: #2d5a27;
+    --accent: #e67e22;
+    --bg: #f8faf8;
+    --text: #333;
+    --low-impact: #27ae60;
+    --high-impact: #e74c3c;
+}
+
+body {
+    width: 320px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.card {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Forces content to the left */
+    gap: 2px;
+    /* More space between logo and text */
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    /* Optional: adds a clean separator line */
+}
+
+.logo-img {
+    width: 42px;
+    /* Increased from 32px */
+    height: 42px;
+    /* Increased from 32px */
+    object-fit: contain;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--primary);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    /* Makes the heading look tighter and more professional */
+}
+
+.status-text {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    margin: 20px 0;
+}
+
+/* Grade Circle */
+.grade-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.grade-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    background: var(--low-impact);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.impact-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    color: #888;
+}
+
+/* Value Display */
+.value-display {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#co2-value {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--accent);
+}
+
+.unit {
+    font-size: 1rem;
+    color: #666;
+    margin-left: 4px;
+}
+
+/* Progress Bar */
+.progress-bar-bg {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--low-impact);
+    transition: width 0.5s ease, background 0.5s ease;
+}
+
+.details-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #555;
+    text-align: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+/* Footer & Button */
+footer {
+    margin-top: 20px;
+}
+
+button {
+    width: 100%;
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.footer-note {
+    font-size: 0.65rem;
+    text-align: center;
+    color: #aaa;
+    margin-top: 15px;
+}
+
+.hidden {
+    display: none;
+}

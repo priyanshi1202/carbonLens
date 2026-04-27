@@ -1,0 +1,47 @@
+{
+    "manifest_version": 3,
+    "name": "CarbonLens",
+    "version": "1.0",
+    "icons": {
+        "16": "icon.svg",
+        "48": "icon.svg",
+        "128": "icon.svg"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon.svg",
+            "48": "icon.svg",
+            "128": "icon.svg"
+        }
+    },
+    "description": "AI-powered carbon footprint estimator.",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions": [
+        "https://generativelanguage.googleapis.com/*"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.amazon.in/*",
+                "*://*.flipkart.com/*",
+                "*://*.myntra.com/*",
+                "*://*.meesho.com/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ]
+}

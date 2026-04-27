@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+
+
+<body>
+    <div class="card">
+        <header>
+            <img src="icon.svg" alt="CarbonLens Logo" class="logo-img">
+            <h1>CarbonLens</h1>
+        </header>
+
+        <main id="main-content">
+            <div id="status" class="status-text">Ready to scan...</div>
+
+            <div id="result-area" class="hidden">
+                <div class="grade-container">
+                    <div id="impact-grade" class="grade-circle">B</div>
+                    <div class="impact-label">Impact Score</div>
+                </div>
+
+                <div class="value-display">
+                    <span id="co2-value">0.00</span>
+                    <span class="unit">kg CO2e</span>
+                </div>
+
+                <div class="progress-bar-bg">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+
+                <p id="details" class="details-text"></p>
+            </div>
+        </main>
+
+        <footer>
+            <button id="scan-btn">Analyze Product</button>
+            <p class="footer-note">Powered by Gemini 2.5 Flash & ICE Data</p>
+        </footer>
+    </div>
+    <script type="module" src="popup.js"></script>
+</body>
+
+</html>
